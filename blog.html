@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRF Template Challenge</title>
+    <!-- linkjQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Slick-Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Slick-Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <style type="text/tailwindcss">
+        @layer base {
+          body {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            color: black;
+          }
+        }  
+        @layer utilities {
+            .mukta {
+            font-family: "Mukta", sans-serif;
+            }
+            .font_bricolage {
+            font-family: "Bricolage Grotesque", sans-serif;
+            }
+            .txt_cruel_ruby{
+                color: #DD3142;
+            }
+            .bg_cruel_ruby{
+                background-color: #DD3142;
+            }
+            .txt_dove_grey{
+                color: #6D6D6D;
+            }
+            .bg_dove_grey{
+                background-color: #6D6D6D;
+            }
+            .txt_black_sheep{
+                color: #0E0E0E;
+            }
+            .bg_black_sheep{
+                background-color: #0E0E0E;
+            }
+            .container{
+                max-width: 100%;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            .container_cild{
+                max-width: 1170px;
+                margin: auto;
+            }
+            /* slider */
+            .slick-dots {
+                display: flex !important;
+                justify-content: center; 
+                gap: 4px;
+            }
+            .slick-dots li {
+                margin: 0;
+                margin-top: 17px;
+            }
+            .slick-dots li button {
+                width: 6px;
+                height: 6px;
+                border-radius: 9999px;
+                background-color: #E2E2E2;
+                padding: 0;
+                font-size: 0;
+            }
+            .slick-dots li.slick-active button {
+                background-color: #DD3142;
+            }
+
+            .slick-dots li button:before {
+                display: none !important;
+            }
+        }
+      </style>   
+</head>
+<body>
+
+    <!-- Header -->
+
+    <div class="container py-[10px] bg-white shadow-[0_4px_24px_rgba(0,0,0,0.05)] z-100 sticky top-0">
+        <div class="container_cild flex items-center justify-between">
+            <div><a href="index.html"><img class="w-[165px]" src="./asset/image/site_logo.svg" alt="site_logo"></a></div>
+            <div class="flex items-center gap-10">
+                <ul class="flex text-sm font-medium	text-[#222222] gap-9">
+                    <li class="border-b-2 border-[#fff] duration-300 hover:border-[#DD3142]"><a class="inline-block py-[1px]" href="index.html">Home</a></li>
+                    <li class="border-b-2 border-[#fff] duration-300 hover:border-[#DD3142]"><a class="inline-block py-[1px]" href="about.html">About us</a></li>
+                    <li class="border-b-2 border-[#fff] duration-300 hover:border-[#DD3142]"><a class="inline-block py-[1px]" href="service.html">Services</a></li>
+                    <li class="border-b-2 border-[#fff] duration-300 hover:border-[#DD3142]"><a class="inline-block py-[1px]" href="project.html">Project</a></li>
+
+                    <li class="border-b-2 border-[#DD3142]"><a class="inline-block py-[1px]" href="blog.html">Blogs</a></li>
+                    <li class="border-b-2 border-[#fff] duration-300 hover:border-[#DD3142]"><a class="inline-block py-[1px]" href="contact.html">Contact</a></li>
+                </ul>
+                <a class="bg-[#DD3142] rounded-[5px] flex min-w-[146px] h-[36px] items-center justify-center px-[10px] text-xs	font-bold text-white uppercase duration-300 hover:bg-black" href="#">Request a call Back</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="container py-5">
+        <div class="container_cild flex items-center gap-11">
+            <div class="w-[41%]">
+                <h1 class="text-[44px] leading-[52px] font-bold mb-[22px]">Our Blogs</h1>
+                <p class="text-sm/4 max-w-[432px]">Stay informed with expert tips, plumbing guides, and home maintenance advice. From quick fixes to deep dives, our blogs help you keep your plumbing smooth, safe, and efficient — one post at a time.</p>
+            </div>
+            <div class="w-[59%] min-h-[255px] bg-[url('./asset/image/blog/banner.webp')] bg-cover bg-center"></div>
+        </div>
+    </div>
+
+    <!-- Trusted Plumbing Tips & Insights -->
+    
+    <div class="container pt-19 pb-8">
+        <div class="container_cild flex items-center gap-14">
+            <div class="w-[52%] mr-"><img class="w-[568px] h-[412px] object-cover" src="./asset/image/blog/bg (3).webp" alt=""></div>
+            <div class="w-[48%] ml-1 mt-1">
+                <h2 class="font-normal text-[38px] leading-[44px]">Trusted Plumbing Tips & Insights</h2>
+                <div class="text-xs leading-[15px] flex flex-col gap-[10px] mt-4 mb-3">
+                    <p>We believe that understanding your plumbing system is just as important as choosing the right service. That’s why our blog is packed with expert tips, helpful how-to guides, and insights to help you make smarter decisions when it comes to your home or business.</p>
+                    <p>From everyday issues like clogged drains or leaky faucets to larger concerns like water heater efficiency or pipe replacement planning, our blogs break it all down in simple, practical language.
+
+                        We also cover seasonal maintenance checklists, smart plumbing upgrades, water-saving ideas, and safety tips — all to help you avoid unnecessary repairs and extend the life of your plumbing.</p>
+                    <p>Our blog also dives into seasonal maintenance tips, energy-saving plumbing solutions, and simple ways to prevent costly repairs. With every article, we aim to empower you with the knowledge to keep your plumbing systems running safely and efficiently year-round.</p>
+                </div>
+                <a class="txt_cruel_ruby text-base underline" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+            <!-- Blogs -->
+
+            <div class="container pt-10 pb-21">
+                <div class="container_cild">
+
+                    <div class="grid grid-cols-3 gap-x-22 gap-y-14">
+                        <a href="#">
+                            <div class=" flex flex-col gap-[16px]">
+                                <img class="w-full h-[132px] object-cover" src="./asset/image/blog/Mask Group (13).png" alt="">
+                                <h3 class="text-xl leading-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting.</h3>
+                                <p class="text-xs -mt-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest bitcoin mining hardware running for you....</p>
+                                <p class="txt_cruel_ruby text-base underline -mt-2" href="#">Learn More</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class=" flex flex-col gap-[16px]">
+                                <img class="w-full h-[132px] object-cover" src="./asset/image/blog/Mask Group (11).png" alt="">
+                                <h3 class="text-xl leading-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting.</h3>
+                                <p class="text-xs -mt-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest bitcoin mining hardware running for you....</p>
+                                <p class="txt_cruel_ruby text-base underline -mt-2" href="#">Learn More</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class=" flex flex-col gap-[16px]">
+                                <img class="w-full h-[132px] object-cover" src="./asset/image/blog/Mask Group (12).png" alt="">
+                                <h3 class="text-xl leading-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting.</h3>
+                                <p class="text-xs -mt-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest bitcoin mining hardware running for you....</p>
+                                <p class="txt_cruel_ruby text-base underline -mt-2" href="#">Learn More</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class=" flex flex-col gap-[16px]">
+                                <img class="w-full h-[132px] object-cover" src="./asset/image/blog/Mask Group (11).png" alt="">
+                                <h3 class="text-xl leading-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting.</h3>
+                                <p class="text-xs -mt-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest bitcoin mining hardware running for you....</p>
+                                <p class="txt_cruel_ruby text-base underline -mt-2" href="#">Learn More</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class=" flex flex-col gap-[16px]">
+                                <img class="w-full h-[132px] object-cover" src="./asset/image/blog/Mask Group (12).png" alt="">
+                                <h3 class="text-xl leading-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting.</h3>
+                                <p class="text-xs -mt-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest bitcoin mining hardware running for you....</p>
+                                <p class="txt_cruel_ruby text-base underline -mt-2" href="#">Learn More</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class=" flex flex-col gap-[16px]">
+                                <img class="w-full h-[132px] object-cover" src="./asset/image/blog/Mask Group (13).png" alt="">
+                                <h3 class="text-xl leading-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting.</h3>
+                                <p class="text-xs -mt-2">Don’t wrestle with rig assembly and hot, noisy miners at home. We have the fastest bitcoin mining hardware running for you....</p>
+                                <p class="txt_cruel_ruby text-base underline -mt-2" href="#">Learn More</p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+    <!-- Commercial Service -->
+
+    <div class="container mb-23">
+        <div class="container_cild bg-[linear-gradient(to_right,_white_27%,_#DD3142_10%)] min-h-[389px] flex justify-center items-center">
+            <div class="w-[54%]">
+                <img class="w-full h-[314px] " src="./asset/image/about/bg (2).png" alt="">
+            </div>
+            <div class="w-[46%] text-white pl-15">
+                <h2 class="text-[44px] leading-[52px] font-bold mt-3">Commercial Service</h2>
+                <p class="w-[432px] text-sm/4 mt-5">We provide expert plumbing solutions tailored to meet the demands of businesses, offices, and industrial spaces. From installations to maintenance, our team ensures minimal downtime, safety compliance, and efficient plumbing systems—keeping your operations smooth and your environment problem-free.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial -->
+
+    <div class="w-full bg-[url('./asset/image/home/testimonial/(3).webp.png')] bg-cover bg-center px-[25px] pt-11 pb-9">
+        <div class="max-w-[930.48px] m-auto text-center text-white flex flex-col items-center gap-10">
+            <h2 class="text-[#EEFF06] text-3xl font-medium uppercase">Testimonial</h2>
+
+            <script>
+                $(document).ready(function(){
+                  $('.carousel_main').slick({
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 3000
+                  });
+                });
+            </script>
+
+            <div class="carousel_main max-w-[930.48px] m-auto">
+                <div>
+                    <p class="text-xl leading-[23px] mb-6">We had a pipe burst late at night, and their team arrived within 30 minutes. They were fast, polite, and extremely professional. It’s rare to find service this responsive. Highly recommended for anyone needing emergency plumbing help!</p>
+                    <h4 class="text-xl font-bold mukta">Johny Vino</h4>
+                </div>
+                <div>
+                    <p class="text-xl leading-[23px] mb-6">I called them for a blocked kitchen drain, and within an hour everything was fixed. The plumber explained the issue clearly and cleaned up afterward too. Great service, transparent pricing, and quick response — I’ll definitely hire them again!</p>
+                    <h4 class="text-xl font-bold mukta">Rahul Sharma</h4>
+                </div>
+                <div>
+                    <p class="text-xl leading-[23px] mb-6">Outstanding service from start to finish. Booking was easy, the plumber showed up on time, and he fixed our leaking tap in no time. Professional, friendly, and affordable. This company truly values customer satisfaction. Great experience overall! </p>
+                    <h4 class="text-xl font-bold mukta">Ahmed Khan</h4>
+                </div>
+                <div>
+                    <p class="text-xl leading-[23px] mb-6">Our office washroom had a major water issue. Their team handled it professionally without disrupting our work. Courteous staff, clear communication, and quality work. We’re now using them for regular maintenance too. Trustworthy and dependable service provider.</p>
+                    <h4 class="text-xl font-bold mukta">Kunal Verma</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        <!-- our recent blogs -->
+
+        <div class="container py-16">
+            <div class="container_cild">
+                <h2 class="txt_black_sheep text-3xl	font-medium	uppercase mb-10">our recent blogs</h2>
+                <div class="flex gap-22">
+                    <a class="w-1/3" href="#">
+                        <div class=" flex flex-col gap-[15px]">
+                            <img class="w-full h-[132px] object-cover" src="./asset/image/home/blogs/Mask Group (9).png" alt="">
+                            <h3 class="text-xl">Understanding Plumbing Basics at Home</h3>
+                            <p class="text-xs -mt-2">Learn essential plumbing tips and tricks every homeowner should know to avoid costly repairs.</p>
+                        </div>
+                    </a>
+                    <a class="w-1/3" href="#">
+                        <div class="flex flex-col gap-[15px]">
+                            <img class="w-full h-[132px] object-cover" src="./asset/image/home/blogs/Mask Group (10).png" alt="">
+                            <h3 class="text-xl">Why Regular Maintenance Saves You Money</h3>
+                            <p class="text-xs -mt-2">Discover how regular check-ups can help you avoid plumbing disasters and extend system life.</p>
+                        </div>
+                    </a>
+                    <a class="w-1/3" href="#">
+                        <div class="flex flex-col gap-[15px]">
+                            <img class="w-full h-[132px] object-cover" src="./asset/image/home/blogs/Rectangle 172.png" alt="">
+                            <h3 class="text-xl">Choosing the Right Faucet for Your Kitchen</h3>
+                            <p class="text-xs -mt-2">A quick guide on selecting stylish, durable, and efficient kitchen faucets.</p>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+    <!-- Footer -->
+
+    <div class="container py-7 bg-black">
+        <div class="container_cild text-white flex justify-between gap-10">
+            <div class="w-[39%]">
+                <a href="index.html"><img class="w-[165px]" src="./asset/image/footer/logo.svg" alt=""></a>
+                <p class="text-xs mt-7 mb-5 w-[362px]">Plumber Point is a trusted name in the plumbing industry. We are dedicated to offering reliable, affordable, and high-quality plumbing services to homes and businesses.</p>
+                <div class="flex gap-5">
+                    <a href="#"><img src="./asset/image/footer/Group (6).svg" alt=""></a>
+                    <a href="#"><img src="./asset/image/footer/Vector (30).svg" alt=""></a>
+                    <a href="#"><img src="./asset/image/footer/Vector (31).svg" alt=""></a>
+                </div>
+            </div>
+            <div class="w-[24%] pl-13">
+                <h3 class="text-base font-bold txt_cruel_ruby uppercase">Our Services</h3>
+                <ul class="text-xs flex flex-col gap-4 mt-9">
+                    <li><a class="duration-150 hover:text-[#DD3142]" href="#">Plumber Service</a></li>
+                    <li><a class="duration-150 hover:text-[#DD3142]" href="#">Bathroom Plumbing Service</a></li>
+                    <li><a class="duration-150 hover:text-[#DD3142]" href="#">Kitchen Plumbing Service</a></li>
+                    <li><a class="duration-150 hover:text-[#DD3142]" href="#">Roof Plumbing Service</a></li>
+                    <li><a class="duration-150 hover:text-[#DD3142]" href="#">Bathroom Plumbing Service</a></li>
+                    <li><a class="duration-150 hover:text-[#DD3142]" href="#">Kitchen Plumbing Service</a></li>
+                </ul>
+            </div>
+            <div class="w-[17%]">
+                <h3 class="text-base font-bold txt_cruel_ruby uppercase">Contact</h3>
+
+                <div class="flex flex-col gap-9 text-base leading-4 mt-9">
+                    <a href="#"><h4 class="duration-150 hover:text-[#DD3142]">1800-9938-2839<br><span class="text-xs">support@plumberpoint.com</span></h4></a>
+                    <a href="#"><h4 class="duration-150 hover:text-[#DD3142]">A-507 Mandoli<br><span class="text-xs">New Delhi, India</span></h4></a>
+                    <a href="#"><h4 class="duration-150 hover:text-[#DD3142]">Mon-Sat 9.00-15:00<br><span class="text-xs">Sunday CLOSED</span></h4></a>
+                </div>
+            </div>
+            <div class="w-[27%]">
+                <h3 class="text-base font-bold txt_cruel_ruby uppercase">Recent Post</h3>
+
+                <div class="flex flex-col gap-4 mt-5">
+                    <a href="#">
+                        <div class="flex items-center gap-[11px]">
+                            <img class="w-[68px] h-[50px] object-cover" src="./asset/image/footer/Rectangle 172 (3).png" alt="">
+                            <div class="flex flex-col gap-[3px]">
+                                <h5 class="text-[10px] font-medium">Understanding Plumbing Basics at Home</h5>
+                                <p class="text-[8px] leading-[133.5%]">Learn essential plumbing tips and tricks every homeowner should know to avoid costly repairs.</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                    <a href="#">
+                        <div class="flex items-center gap-[11px]">
+                            <img class="w-[68px] h-[50px] object-cover" src="./asset/image/footer/image (74).webp" alt="">
+                            <div class="flex flex-col gap-[3px]">
+                                <h5 class="text-[10px] font-medium">Why Regular Maintenance Saves You Money</h5>
+                                <p class="text-[8px] leading-[133.5%]">Discover how regular check-ups can help you avoid plumbing disasters and extend system life.</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#">
+                        <div class="flex items-center gap-[11px]">
+                            <img class="w-[68px] h-[50px] object-cover" src="./asset/image/footer/Mask Group (10).png" alt="">
+                            <div class="flex flex-col gap-[3px]">
+                                <h5 class="text-[10px] font-medium">Choosing the Right Faucet for Your Kitchen</h5>
+                                <p class="text-[8px] leading-[133.5%]">A quick guide on selecting stylish, durable, and efficient kitchen faucets.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3 bg-black border-t border-[#FFFFFF]">
+        <div class="container_cild flex justify-between items-center txt_cruel_ruby text-[10px]">
+            <h4>©Copyright 2020 Techwero Systems.</h4>
+            <ul class="flex gap-10">
+                <li><a class="duration-300 hover:text-white" href="#">Term of Services</a></li>
+                <li><a class="duration-300 hover:text-white" href="#">Privacy & policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
